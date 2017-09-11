@@ -30,7 +30,8 @@ public void after() throws Exception {
 public void testCheckTheDateWhetherInvalid() throws Exception { 
 //TODO: Test goes here...
     assertEquals("WhenInputNullShouldReturnFalse",false,new DateOperate().checkTheDateWhetherInvalid(""));
-} 
+    assertEquals("WhenInputWrongFormatShouldReturnFalse",false,new DateOperate().checkTheDateWhetherInvalid("2017~1_5"));
+}
 
 /** 
 * 
