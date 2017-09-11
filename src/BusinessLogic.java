@@ -15,8 +15,8 @@ public class BusinessLogic {
     public void doWork(String request){
         initialOperate(request);
         if(operate.checkTheRequestWhetherInvalid(request)){
-            if(!dataBase.checkTheRequestWhetherConflictDataBase(operate.getRequestBean())){
-                dataBase.putInToDataBase(operate.getRequestBean());
+            if(!dataBase.checkTheRequestWhetherConflictDataBase(operate.getDataBean())){
+                dataBase.putInToDataBase(operate.getDataBean());
             }
         }
     }

@@ -18,7 +18,7 @@ public class CancelBookOperate extends Operate {
         return "C".equals(s);
     }
 
-    public DataBean getRequestBean() {
+    public DataBean getDataBean() {
         return null;
     }
 }

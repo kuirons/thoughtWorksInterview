@@ -68,4 +68,14 @@ public void testGetRequestBean() throws Exception {
     assertEquals("WhenInputRightSiteShouldReturnTrue",true,new Operate().checkTheSiteWhetherInvalid("D"));
 }
 
+/**
+ *
+ * Method: getWeekByDate(String data)
+ *
+ */
+@Test public void testGetWeekByDate() throws Exception {
+//TODO: Test goes here...
+    assertEquals("WhenInput20170911ShouldReturnWeekflag","weekflag",new Operate().getWeekByDate("2017-09-11"));
+    assertEquals("WhenInput20170910ShouldReturnWeekflag","weekend",new Operate().getWeekByDate("2017-09-10"));
+}
 } 
