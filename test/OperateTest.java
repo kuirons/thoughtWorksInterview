@@ -54,7 +54,18 @@ public void testCheckTheRequestAttributesEnough() throws Exception {
 @Test
 public void testGetRequestBean() throws Exception { 
 //TODO: Test goes here... 
-} 
-
+}
+/**
+ *
+ * Method: checkTheSiteWhetherInvalid(String request)
+ *
+ */
+@Test public void testCheckTheSiteWhetherInvalid() throws Exception {
+//TODO: Test goes here...
+    assertEquals("WhenInputNullShouldReturnFalse",false,new Operate().checkTheSiteWhetherInvalid(""));
+    assertEquals("WhenInputWrongStringShouldReturnFalse",false,new Operate().checkTheSiteWhetherInvalid("saf"));
+    assertEquals("WhenInputWrongSiteShouldReturnFalse",false,new Operate().checkTheSiteWhetherInvalid("E"));
+    assertEquals("WhenInputRightSiteShouldReturnTrue",true,new Operate().checkTheSiteWhetherInvalid("D"));
+}
 
 } 

@@ -75,21 +75,6 @@ public void testCheckTheTimeWhetherInvalid() throws Exception {
     assertEquals("WhenInputWrongTimeShouldReturnFalse",false,new DateOperate().checkTheTimeWhetherInvalid("10:30"));
     assertEquals("WhenInputRightTimeShouldReturnFalse",true,new DateOperate().checkTheTimeWhetherInvalid("10:00"));
 
-} 
-
-/** 
-* 
-* Method: checkTheSiteWhetherInvalid(String request) 
-* 
-*/ 
-@Test
-public void testCheckTheSiteWhetherInvalid() throws Exception { 
-//TODO: Test goes here...
-    assertEquals("WhenInputNullShouldReturnFalse",false,new DateOperate().checkTheSiteWhetherInvalid(""));
-    assertEquals("WhenInputWrongStringShouldReturnFalse",false,new DateOperate().checkTheSiteWhetherInvalid("saf"));
-    assertEquals("WhenInputWrongSiteShouldReturnFalse",false,new DateOperate().checkTheSiteWhetherInvalid("E"));
-    assertEquals("WhenInputRightSiteShouldReturnTrue",true,new DateOperate().checkTheSiteWhetherInvalid("D"));
 }
-
 
 } 

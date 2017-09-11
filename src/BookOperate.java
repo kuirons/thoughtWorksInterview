@@ -11,7 +11,7 @@ public class BookOperate extends Operate{
     }
 
     public boolean checkTheRequestWhetherInvalid(String request) {
-        return checkTheRequestAttributesEnough(request)&&dateOperate.checkTheDateWhetherInvalid(request.split(" ")[1])&&dateOperate.checkTheTimeWhetherInvalid(request.split(" ")[2])&&dateOperate.checkTheSiteWhetherInvalid(request.split(" ")[3]);
+        return checkTheRequestAttributesEnough(request)&&dateOperate.checkTheDateWhetherInvalid(request.split(" ")[1])&&dateOperate.checkTheTimeWhetherInvalid(request.split(" ")[2])&&checkTheSiteWhetherInvalid(request.split(" ")[3]);
     }
 
     public DataBean getRequestBean() {

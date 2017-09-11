@@ -13,4 +13,13 @@ public class Operate {
     public DataBean getRequestBean() {
         return null;
     }
+
+    public boolean checkTheSiteWhetherInvalid(String site) {
+        boolean flag=true;
+        if(site.length()!=1)
+            flag=false;
+        else if(site.charAt(0)-'A'>3||site.charAt(0)-'A'<0)
+            flag=false;
+        return flag;
+    }
 }

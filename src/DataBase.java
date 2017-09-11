@@ -6,15 +6,15 @@ import java.util.ArrayList;
 public class DataBase {
     private ArrayList<DataBean> dataArrayList;
 
-    public boolean checkTheRequestWhetherExistInDataBase(DataBean requestBean) {
-        return false;
-    }
-
     public void putInToDataBase(DataBean requestBean) {
 
     }
 
     public String[] getInformation() {
         return new String[0];
+    }
+
+    public boolean checkTheRequestWhetherConflictDataBase(DataBean requestBean) {
+        return false;
     }
 }

@@ -36,14 +36,6 @@ public class DateOperate {
         return flag;
     }
 
-    public boolean checkTheSiteWhetherInvalid(String site) {
-        boolean flag=true;
-        if(site.length()!=1)
-            flag=false;
-        else if(site.charAt(0)-'A'>3||site.charAt(0)-'A'<0)
-            flag=false;
-        return flag;
-    }
     public boolean checkTheTimeBetweenInterval(String beginTime,String endTime,String testTime) {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm");
         dateFormat.setLenient(false);
