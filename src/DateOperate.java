@@ -24,7 +24,15 @@ public class DateOperate {
     }
 
     public boolean checkTheTimeWhetherInvalid(String time) {
+        return checkTheTimeBetweenInterval("2017-09-11 09:00","2017-09-11 22:00","2017-09-11 "+time)&&checkTheTimeWhetherPunctuality(time);
+    }
+
+    public boolean checkTheTimeWhetherPunctuality(String time) {
         boolean flag=true;
+        if(time.length()<5)
+            flag=false;
+        else
+            flag="00".equals(time.substring(3,5));
         return flag;
     }
 
@@ -53,4 +61,5 @@ public class DateOperate {
         }
         return flag;
     }
+
 }

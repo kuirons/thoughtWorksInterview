@@ -34,6 +34,20 @@ public void testCheckTheDateWhetherInvalid() throws Exception {
     assertEquals("WhenInputWrongYearShouldReturnFalse",false,new DateOperate().checkTheDateWhetherInvalid("2017-02-31"));
     assertEquals("WhenInputRightYearShouldReturnFalse",true,new DateOperate().checkTheDateWhetherInvalid("2017-02-15"));
 }
+
+/**
+ *
+ * Method: checkTheTimeWhetherPunctuality(String time)
+ *
+ */
+@Test public void testCheckTheTimeWhetherPunctuality() throws Exception {
+//TODO: Test goes here...
+    assertEquals("WhenInputNullShouldReturnFalse",false,new DateOperate().checkTheTimeWhetherPunctuality(""));
+    assertEquals("WhenInputWrongFormatShouldReturnFalse",false,new DateOperate().checkTheTimeWhetherPunctuality("1011"));
+    assertEquals("WhenInputWrongYearShouldReturnFalse",false,new DateOperate().checkTheTimeWhetherPunctuality("10:01"));
+    assertEquals("WhenInputRightYearShouldReturnFalse",true,new DateOperate().checkTheTimeWhetherPunctuality("10:00"));
+}
+
 /**
  *
  * Method: checkTheTimeBetweenInterval(String beginTime,String endTime,String testTime)
