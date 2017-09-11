@@ -24,7 +24,7 @@ public class DateOperate {
     }
 
     public boolean checkTheTimeWhetherInvalid(String time) {
-        return checkTheTimeBetweenInterval("2017-09-11 09:00","2017-09-11 22:00","2017-09-11 "+time)&&checkTheTimeWhetherPunctuality(time);
+        return checkTheTimeBetweenInterval("2017-09-11 09:00","2017-09-11 22:00","2017-09-11 "+time.split("~")[0])&&checkTheTimeWhetherPunctuality(time.split("~")[0])&&checkTheTimeBetweenInterval("2017-09-11 09:00","2017-09-11 22:00","2017-09-11 "+time.split("~")[1])&&checkTheTimeWhetherPunctuality(time.split("~")[1]);
     }
 
     public boolean checkTheTimeWhetherPunctuality(String time) {
