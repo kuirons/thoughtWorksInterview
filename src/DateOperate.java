@@ -28,6 +28,8 @@ public class DateOperate {
     }
 
     private boolean checktheTimeWhetherRepet(String time) {
+        if(time.split("~").length!=2)
+            return false;
         return !time.split("~")[0].equals(time.split("~")[1]);
     }
 

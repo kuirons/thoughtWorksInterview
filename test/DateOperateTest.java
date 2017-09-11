@@ -73,7 +73,7 @@ public void testCheckTheTimeWhetherInvalid() throws Exception {
     assertEquals("WhenInputWrongFormatShouldReturnFalse",false,new DateOperate().checkTheTimeWhetherInvalid(""));
     assertEquals("WhenInputNullShouldReturnFalse",false,new DateOperate().checkTheTimeWhetherInvalid("1000"));
     assertEquals("WhenInputWrongTimeShouldReturnFalse",false,new DateOperate().checkTheTimeWhetherInvalid("10:30"));
-    assertEquals("WhenInputRightTimeShouldReturnFalse",true,new DateOperate().checkTheTimeWhetherInvalid("10:00"));
+    assertEquals("WhenInputRightTimeShouldReturnFalse",false,new DateOperate().checkTheTimeWhetherInvalid("10:00"));
 
 }
 

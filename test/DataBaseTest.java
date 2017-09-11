@@ -39,12 +39,6 @@ public void testPutInToDataBase() throws Exception {
 @Test
 public void testCheckTheRequestWhetherConflictDataBase() throws Exception { 
 //TODO: Test goes here...
-    DataBean test=new DataBean();
-    test.setIncomeType("incometype");
-    test.setDate("2017-08-01");
-    test.setTime("18:00~20:00");
-    test.setSite("A");
-    assertEquals(true,new DataBase().checkTheRequestWhetherConflictDataBase(test));
 } 
 
 /** 
