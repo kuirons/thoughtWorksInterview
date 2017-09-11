@@ -34,6 +34,19 @@ public void testCheckTheDateWhetherInvalid() throws Exception {
     assertEquals("WhenInputWrongYearShouldReturnFalse",false,new DateOperate().checkTheDateWhetherInvalid("2017-02-31"));
     assertEquals("WhenInputRightYearShouldReturnFalse",true,new DateOperate().checkTheDateWhetherInvalid("2017-02-15"));
 }
+/**
+ *
+ * Method: checkTheTimeBetweenInterval(String beginTime,String endTime,String testTime)
+ *
+ */
+@Test
+public void testcheckTheTimeBetweenInterval() throws Exception {
+//TODO: Test goes here...
+    assertEquals("WhenInputNullShouldReturnFalse",false,new DateOperate().checkTheTimeBetweenInterval("2017-09-11 09:00","2017-09-11 22:00",""));
+    assertEquals("WhenInputWrongFormatShouldReturnFalse",false,new DateOperate().checkTheTimeBetweenInterval("2017-09-11 09:00","2017-09-11 22:00","2017-09-11 9:00"));
+    assertEquals("WhenInputWrongTimeShouldReturnFalse",false,new DateOperate().checkTheTimeBetweenInterval("2017-09-11 09:00","2017-09-11 22:00","2017-09-11 02:00"));
+    assertEquals("WhenInputRightTimeShouldReturnFalse",true,new DateOperate().checkTheTimeBetweenInterval("2017-09-11 09:00","2017-09-11 22:00","2017-09-11 10:00"));
+}
 
 /** 
 * 
