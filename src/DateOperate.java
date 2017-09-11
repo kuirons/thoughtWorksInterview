@@ -1,3 +1,4 @@
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 /**
@@ -5,14 +6,19 @@ import java.text.SimpleDateFormat;
  */
 public class DateOperate {
     public boolean checkTheDateWhetherInvalid(String date){
-        boolean flag=false;
+        boolean flag=true;
         if(date==null||"".equals(date))
             flag=false;
-        else
-            flag=true;
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         if (date.trim().length() != dateFormat.toPattern().length())
             flag=false;
+        dateFormat.setLenient(false);
+        try {
+            dateFormat.parse(date.trim());
+        }
+        catch (ParseException pe) {
+            flag=false;
+        }
         return flag;
     }
 
