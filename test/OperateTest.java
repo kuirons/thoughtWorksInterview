@@ -78,4 +78,17 @@ public void testGetRequestBean() throws Exception {
     assertEquals("WhenInput20170911ShouldReturnWeekflag","weekflag",new Operate().getWeekByDate("2017-09-11"));
     assertEquals("WhenInput20170910ShouldReturnWeekflag","weekend",new Operate().getWeekByDate("2017-09-10"));
 }
+/**
+ *
+ * Method: calculateTheIncome(DateBean dateBean)
+ *
+ */
+@Test public void testCalculateTheIncome() throws Exception {
+//TODO: Test goes here...
+    DataBean dataBean=new DataBean();
+    dataBean.setDate("2017-09-10");
+    dataBean.setTime("10:00~21:00");
+    //assertEquals("WhenInput2017091110:00-21:00ShouldReturn580.0",580.0,new Operate().calculateTheIncome(dataBean),0.0);
+    assertEquals("WhenInput2017091010:00-21:00ShouldReturn560.0",560.0,new Operate().calculateTheIncome(dataBean),0.0);
+    }
 } 
