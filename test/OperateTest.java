@@ -41,6 +41,8 @@ public void testCheckTheRequestAttributesEnough() throws Exception {
     assertEquals("whenInputSpaceShouldReturnFalse",false,new Operate().checkTheRequestAttributesEnough(""));
     assertEquals("whenInputParamLengthLessThan4ShouldReturnFalse",false,new Operate().checkTheRequestAttributesEnough("asdfasdfasdf1212412312"));
     assertEquals("whenInputParamLengthMoreThan5ShouldReturnFalse",false,new Operate().checkTheRequestAttributesEnough("as d fa sd fas df1 2124 12312"));
+    assertEquals("whenInputParamRightShouldReturnTrue",true,new Operate().checkTheRequestAttributesEnough("11 12 as 12"));
+    assertEquals("whenInputParamRightShouldReturnTrue",true,new Operate().checkTheRequestAttributesEnough("11 12 as 12 tt"));
 }
 
 
