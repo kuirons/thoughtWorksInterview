@@ -16,16 +16,19 @@ public class BusinessLogic {
         initialOperate(request);
         if(operate.checkTheRequestWhetherInvalid(request)){
             if(!dataBase.checkTheRequestWhetherConflictDataBase(operate.getDataBean())){
-                dataBase.putInToDataBase(operate.getDataBean());
+                    dataBase.putInToDataBase(operate.getDataBean());
+                    System.out.println("Success: the booking is accepted!");
             }
+            else
+                System.out.println(dataBase.getInfo());
+        }
+        else {
+            System.out.println(operate.getDataBean().getErrorInfo());
         }
     }
 
     public void show(){
-        for (String information :
-                dataBase.getInformation()) {
-            System.out.println(information);
-        }
+        dataBase.show();
     }
 
     private void initialOperate(String request) {
@@ -47,7 +50,7 @@ public class BusinessLogic {
                 break;
             else if("".equals(line))
                 businessLogic.show();
-            businessLogic.doWork(line);
+            else businessLogic.doWork(line);
         }
         bufw.close();
     }

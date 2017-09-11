@@ -40,7 +40,7 @@ public class Operate {
             int begina =searchTheBeginTimeInterval(dataBean.getTime().split("~")[0]);
             int endb=searchTheEndTimeInterval(dataBean.getTime().split("~")[1]);
             if(endb- begina <0){
-                switch (begin){
+                switch (begina){
                     case 12:result+=40.0*(end- begin);break;
                     case 18:result+=50.0*(end- begin);break;
                     case 20:result+=60.0*(end- begin);break;

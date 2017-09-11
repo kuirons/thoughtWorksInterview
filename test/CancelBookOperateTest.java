@@ -56,5 +56,13 @@ public void testCheckTheCancelFlag() throws Exception {
     assertEquals("WhenInputCShouldReturnTrue",true,new CancelBookOperate().checkTheCancelFlag("C"));
     assertEquals("WhenInputOthersShouldReturnFalse",false,new CancelBookOperate().checkTheCancelFlag("12asdf"));
 }
+/**
+ *
+ * Method: setDataBean(String request)
+ *
+ */
+@Test public void testsetDataBean() throws Exception {
+//TODO: Test goes here...
+}
 
 } 

@@ -86,9 +86,9 @@ public void testGetRequestBean() throws Exception {
 @Test public void testCalculateTheIncome() throws Exception {
 //TODO: Test goes here...
     DataBean dataBean=new DataBean();
-    dataBean.setDate("2017-09-10");
-    dataBean.setTime("10:00~21:00");
+    dataBean.setDate("2017-08-05");
+    dataBean.setTime("09:00~11:00");
     //assertEquals("WhenInput2017091110:00-21:00ShouldReturn580.0",580.0,new Operate().calculateTheIncome(dataBean),0.0);
-    assertEquals("WhenInput2017091010:00-21:00ShouldReturn560.0",560.0,new Operate().calculateTheIncome(dataBean),0.0);
+    assertEquals("WhenInput2017091010:00-21:00ShouldReturn560.0",80.0,new Operate().calculateTheIncome(dataBean),0.0);
     }
 } 
