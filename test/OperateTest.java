@@ -39,6 +39,7 @@ public void testCheckTheRequestWhetherInvalid() throws Exception {
 @Test
 public void testCheckTheRequestAttributesEnough() throws Exception {
     assertEquals("whenInputSpaceShouldReturnFalse",false,new Operate().checkTheRequestAttributesEnough(""));
+    assertEquals("whenInputParamLengthLessThan4ShouldReturnFalse",false,new Operate().checkTheRequestAttributesEnough("asdfasdfasdf1212412312"));
 }
 
 
