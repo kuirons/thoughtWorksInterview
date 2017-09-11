@@ -88,6 +88,7 @@ public void testCheckTheSiteWhetherInvalid() throws Exception {
     assertEquals("WhenInputNullShouldReturnFalse",false,new DateOperate().checkTheSiteWhetherInvalid(""));
     assertEquals("WhenInputWrongStringShouldReturnFalse",false,new DateOperate().checkTheSiteWhetherInvalid("saf"));
     assertEquals("WhenInputWrongSiteShouldReturnFalse",false,new DateOperate().checkTheSiteWhetherInvalid("E"));
+    assertEquals("WhenInputRightSiteShouldReturnTrue",true,new DateOperate().checkTheSiteWhetherInvalid("D"));
 }
 
 
