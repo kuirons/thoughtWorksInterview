@@ -68,8 +68,13 @@ public void testcheckTheTimeBetweenInterval() throws Exception {
 * 
 */ 
 @Test
-public void testCheckTheTimeWhetherInvalid() throws Exception { 
-//TODO: Test goes here... 
+public void testCheckTheTimeWhetherInvalid() throws Exception {
+//TODO: Test goes here...
+    assertEquals("WhenInputWrongFormatShouldReturnFalse",false,new DateOperate().checkTheTimeWhetherInvalid(""));
+    assertEquals("WhenInputNullShouldReturnFalse",false,new DateOperate().checkTheTimeWhetherInvalid("1000"));
+    assertEquals("WhenInputWrongTimeShouldReturnFalse",false,new DateOperate().checkTheTimeWhetherInvalid("10:30"));
+    assertEquals("WhenInputRightTimeShouldReturnFalse",true,new DateOperate().checkTheTimeWhetherInvalid("10:00"));
+
 } 
 
 /** 
@@ -79,7 +84,8 @@ public void testCheckTheTimeWhetherInvalid() throws Exception {
 */ 
 @Test
 public void testCheckTheSiteWhetherInvalid() throws Exception { 
-//TODO: Test goes here... 
+//TODO: Test goes here...
+    assertEquals("WhenInputNullShouldReturnFalse",false,new DateOperate().checkTheSiteWhetherInvalid(""));
 } 
 
 

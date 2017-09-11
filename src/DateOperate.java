@@ -37,6 +37,7 @@ public class DateOperate {
     }
 
     public boolean checkTheSiteWhetherInvalid(String site) {
+
         return false;
     }
     public boolean checkTheTimeBetweenInterval(String beginTime,String endTime,String testTime) {
