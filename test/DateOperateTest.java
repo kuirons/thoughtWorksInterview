@@ -32,6 +32,7 @@ public void testCheckTheDateWhetherInvalid() throws Exception {
     assertEquals("WhenInputNullShouldReturnFalse",false,new DateOperate().checkTheDateWhetherInvalid(""));
     assertEquals("WhenInputWrongFormatShouldReturnFalse",false,new DateOperate().checkTheDateWhetherInvalid("2017~1_5"));
     assertEquals("WhenInputWrongYearShouldReturnFalse",false,new DateOperate().checkTheDateWhetherInvalid("2017-02-31"));
+    assertEquals("WhenInputRightYearShouldReturnFalse",true,new DateOperate().checkTheDateWhetherInvalid("2017-02-15"));
 }
 
 /** 
